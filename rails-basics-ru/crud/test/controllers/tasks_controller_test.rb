@@ -45,7 +45,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   test 'should not create task because of validation' do
     task_name = 'Empty task'
     post tasks_path, params: { task: { name: task_name } }
-    assert_response 200
+    assert_response 422
 
     assert_not Task.find_by(name: task_name)
   end

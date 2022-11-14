@@ -12,7 +12,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to task_path(@task)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
