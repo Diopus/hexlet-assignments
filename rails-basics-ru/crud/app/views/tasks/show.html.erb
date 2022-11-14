@@ -1,0 +1,23 @@
+<h1>Task</h1>
+
+<p><b style="font-size: 20px;"><%= @task.name %></b>
+  <i><%= "(#{@task.status})" %></i>
+</p>
+<p><%= @task.description %></p>
+<hr>
+<p>
+  <%= "Assigned to: " %>
+  <% if @task.performer.nil? || @task.performer.empty? %>
+    <i><%= "none" %></i>
+  <% else %>
+    <b><%= @task.performer %></b>
+  <% end %>
+</p>
+<p>
+  <%= "Created: " %>
+  <b><%= @task.creator %></b>
+  <i><%= @task.created_at.strftime("%H:%M %d.%m.%Y")  %></i>
+</p> 
+
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Do you really want to delete article?' } %>

@@ -1,0 +1,8 @@
+<h1>Edit task</h1>
+
+<%= render 'form', task: @task %>
+
+<hr>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>

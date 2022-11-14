@@ -1,0 +1,21 @@
+<%= form_with model: @task do |form| %></p>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %><br>
+  </div>
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %><br>
+  </div>
+  <div>
+    <%= form.label :creator %><br>
+    <%= form.text_field :creator, enabled: @task.creator.nil? || @task.creator.empty? %><br>
+  </div>
+  <div>
+    <%= form.label :performer %><br>
+    <%= form.text_field :performer %><br>
+  </div>
+
+  <br>
+  <%= form.submit %>
+<% end %>

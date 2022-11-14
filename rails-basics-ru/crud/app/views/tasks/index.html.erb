@@ -1,0 +1,15 @@
+<hr>
+
+<h1>Tasks list</h1><li>
+<%= link_to "Create task", new_task_path %></li>
+<br>
+<% @tasks.each do |task| %>
+  <p>
+    <%= link_to task.name, task_path(task) %>
+    <% if task.completed %>
+      <i>"completed"</i>
+    <% else %>
+      <%= "(#{task.status})" %>
+    <% end %>
+  </p>
+<% end %>
