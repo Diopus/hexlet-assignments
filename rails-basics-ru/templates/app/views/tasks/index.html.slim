@@ -1,0 +1,14 @@
+hr
+h1
+  | Tasks list
+li
+  = link_to "Create task", new_task_path
+br
+- @tasks.each do |task|
+  p
+    = link_to task.name, task_path(task)
+    - if task.completed
+      i
+        | "completed"
+    - else
+      = "(#{task.status})"

@@ -1,0 +1,26 @@
+h1
+  | Task
+p
+  b[style="font-size: 20px;"]
+    = @task.name
+  i
+    = "(#{@task.status})"
+p
+  = @task.description
+hr
+p
+  = "Assigned to: "
+  - if @task.performer.nil? || @task.performer.empty?
+    i
+      = "none"
+  - else
+    b
+      = @task.performer
+p
+  = "Created: "
+  b
+    = @task.creator
+  i
+    = @task.created_at.strftime("%H:%M %d.%m.%Y")
+= link_to 'Edit', edit_task_path(@task)
+=< link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Do you really want to delete article?' }
