@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# BEGIN
+one:
+  name: New
+
+two:
+  name: In Progress
+
+three:
+  name: Done
+# END

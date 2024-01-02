@@ -1,0 +1,15 @@
+div id="#{dom_id task}"
+  p
+    strong Name:
+    =< task.name
+  p
+    strong Description:
+    =< task.description
+
+  p
+    strong User:
+    =< task.user.name
+
+  p
+    strong Status:
+    =< task.status.name
