@@ -1,0 +1,10 @@
+ru:
+  layouts:
+    application:
+      hexlet_title: © Хекслет, %{year}
+      title: Проект как проект, ничего особенного
+    shared:
+      nav:
+        hexlet_logo: Хекслет
+        home: Домой
+        posts: Посты

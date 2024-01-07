@@ -1,0 +1,46 @@
+en:
+  posts:
+    # BEGIN
+    create:
+      success: Post was succesfully created
+
+    destroy:
+      success: Post was succesfully destroyed
+
+    edit:
+      title: Title
+
+    index:
+      comments_count_html:
+        zero: No comments
+        one: 1 comment
+        few: '%{count} comments'
+        other: '%{count} comments'
+
+      comments_table_title: Title
+      new: New post
+      page_title: Posts
+
+    new:
+      title: New post
+
+    show:
+      body: Body
+      comments: Comments
+
+    update:
+      success: Post was succesfully updated
+    # END
+
+    comments:
+      destroy:
+        success: Comment was succesfully destroyed
+
+      edit:
+        title: Editing comment
+
+      create:
+        success: Comment was succesfully created
+
+      update:
+        success: Comment was succesfully updated

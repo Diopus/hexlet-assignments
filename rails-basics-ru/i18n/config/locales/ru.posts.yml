@@ -1,0 +1,47 @@
+ru:
+  posts:
+    # BEGIN
+    create:
+      success: Пост успешно создан
+
+    destroy:
+      success: Пост успешно удалён
+
+    edit:
+      title: Title
+
+    index:
+      comments_count_html:
+        zero: нет комментариев
+        one: 1 комментарий
+        few: '%{count} комментария'
+        many: '%{count} комментариев'
+        other: '%{count} комментариев'
+
+      comments_table_title: Заголовок
+      new: Новый пост
+      page_title: Посты
+
+    new:
+      title: Новый пост
+
+    show:
+      body: Body
+      comments: Comments
+
+    update:
+      success: Пост успешно обновлён
+    # END
+
+    comments:
+      destroy:
+        success: Комментарий успешно удалён
+
+      edit:
+        title: Изменить комментарий
+
+      create:
+        success: Комментарий успешно создан
+
+      update:
+        success: Комментарий успешно обновлён

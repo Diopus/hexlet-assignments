@@ -1,0 +1,10 @@
+en:
+  layouts:
+    application:
+      hexlet_title: © Hexlet, %{year}
+      title: Internationalization project connecting millions of people and whispering "Arthas"
+    shared:
+      nav:
+        hexlet_logo: Hexlet
+        home: Home
+        posts: Posts
