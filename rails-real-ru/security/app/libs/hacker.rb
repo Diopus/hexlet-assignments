@@ -10,32 +10,33 @@ class Hacker
     def hack(email, password)
       # BEGIN
       unless email.is_a?(String) && password.is_a?(String) && !email.empty? && !password.empty?
-        puts "Invalid email or password"
+        puts 'Invalid email or password'
         return
       end
 
       hostname = 'http://localhost:3000'
       users_path = '/users'
       users_sign_up_path = '/users/sign_up'
-      
+
       uri_users = URI.join(hostname, users_path)
       uri_sign_up = URI.join(hostname, users_sign_up_path)
 
       # get csrf-token and cookie
       token, cookie = get_token_and_cookie(uri_sign_up)
-      
+
       params = {
         'user[email]': email,
         'user[password]': password,
         'user[password_confirmation]': password,
-        'authenticity_token': token
+        authenticity_token: token
       }
 
-      response = sign_up(uri_users, params, cookie)
+      sign_up(uri_users, params, cookie)
       # END
     end
 
     private
+
     def get_token_and_cookie(uri)
       response = Net::HTTP.get_response(uri)
       html = Nokogiri::HTML(response.body)
@@ -44,11 +45,11 @@ class Hacker
       token_tag = html.at('input[name="authenticity_token"]')
       token = token_tag['value'] if token_tag
 
-      #get cookie
+      # get cookie
       cookie = response.response['set-cookie'].split('; ')[0]
 
       puts "get_token_and_cookie: #{response.code}"
-      return token, cookie
+      [token, cookie]
     end
 
     def sign_up(uri, params, cookie)
