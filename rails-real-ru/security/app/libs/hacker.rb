@@ -14,7 +14,7 @@ class Hacker
         return
       end
 
-      hostname = 'http://localhost:3000'
+      hostname = 'https://rails-collective-blog-ru.hexlet.app'
       users_path = '/users'
       users_sign_up_path = '/users/sign_up'
 
@@ -63,6 +63,8 @@ class Hacker
 
       response = http.request request
       puts "sign_up: #{response.code}"
+
+      response
     end
   end
 end
